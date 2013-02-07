@@ -73,6 +73,6 @@ def test_suite(*args):
                                              ))
 load_tests = test_suite
 
-#if __name__ == "__main__":
-#    doctest.testmod()
+if __name__ == "__main__":
+    doctest.testmod()
 
