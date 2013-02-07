@@ -1,0 +1,25 @@
+
+
+		
+		
+		Kontonummer ;12345678
+		Kontowährung ;EUR
+		Alter Saldo ;11.222,33
+
+
+
+		Guthaben ;
+Specified period (01.02.2012 - 07.02.2013)
+
+Wertstellung;Verwendungszweck;Soll;Haben
+
+03.02.2013;Zahlungseingang:ÜBERWEISUNG AUF BOS:;0,00;1.200,00;
+02.01.2013;Überweisung:Übertrag Tagesgeld:;1.000,00;0,00;
+31.12.2012;Zinsen vor Steuern;0,00;104,88;
+31.12.2012;Abgeltungssteuer;101,11;0,00;
+31.12.2012;Solidaritätszuschlag;11,07;0,00;
+07.12.2012;Zahlungseingang:PERSÖNLICHE ÜBERWEISUNG:;0,00;2.500,00;
+10.06.2012;Zahlungseingang:PERSÖNLICHE ÜBERWEISUNG:;0,00;1.100,00;
+03.02.2012;Überweisung:Übertrag Tagesgeld:;1.000,00;0,00;
+03.02.2012;Zahlungseingang;0,00;1.700,00;
+02.02.2012;Überweisung;1.000,00;0,00;
