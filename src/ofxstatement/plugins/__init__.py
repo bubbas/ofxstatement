@@ -8,3 +8,4 @@ from . import danske
 from . import dkb_cc
 from . import lbbamazon
 from . import bos_de
+from . import flatex
