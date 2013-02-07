@@ -3,6 +3,7 @@ from ofxstatement.plugin import Plugin
 from ofxstatement import statement
 import csv
 
+
 class DKBCCCsvStatementParser(CsvStatementParser):
     mappings = {"date": 1, "memo": 3, "amount": 4}
     date_format = "%d.%m.%Y"
@@ -27,10 +28,11 @@ class DKBCCCsvStatementParser(CsvStatementParser):
          
         if self.cur_record <= 8:
             return None
-        line[4]=line[4].replace(',','.')
+        line[4]=line[4].replace('.','').replace(',','.')
         # fill statement line according to mappings
         sl = super(DKBCCCsvStatementParser, self).parse_record(line)
         return sl
+
 
 class DKBCCPlugin(Plugin):
     name = "dkb_cc"
