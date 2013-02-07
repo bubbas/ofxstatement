@@ -21,12 +21,12 @@ def doctest_BosDeCsvStatementParser():
         >>> len(statement.lines)
         10
         >>> statement.start_balance
-        '11222.33'
+        11222.33
         >>> statement.start_date
-        '01.02.2012'
+        datetime.datetime(2012, 2, 1, 0, 0)
         >>> statement.end_balance
         >>> statement.end_date
-        '07.02.2013'
+        datetime.datetime(2013, 2, 7, 0, 0)
         >>> statement.currency
         'EUR'
 

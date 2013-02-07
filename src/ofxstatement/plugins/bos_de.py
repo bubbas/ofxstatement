@@ -24,7 +24,7 @@ class BosDeCsvStatementParser(CsvStatementParser):
             self.statement.currency=line[1]
             return None
         if self.cur_record == 7:
-            self.statement.start_balance=line[1].replace('.','').replace(',','.')
+            self.statement.start_balance=self.parse_float(line[1].replace('.','').replace(',','.'))
             return None
         if self.cur_record == 12:
             re1='.*?'	# Non-greedy match on filler
@@ -32,8 +32,8 @@ class BosDeCsvStatementParser(CsvStatementParser):
 
             rg = re.compile(re1+re2+re1+re2,re.IGNORECASE|re.DOTALL)
             m = rg.search(line[0])
-            self.statement.start_date=m.group(1)
-            self.statement.end_date=m.group(2)
+            self.statement.start_date=self.parse_datetime(m.group(1))
+            self.statement.end_date=self.parse_datetime(m.group(2))
             return None
 
         #Change decimalsign from , to .
