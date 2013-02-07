@@ -6,7 +6,7 @@ import re
 
 
 class FlatexCsvStatementParser(CsvStatementParser):
-    mappings = {"date": 0, "payee":3,"memo": 4, "amount": 5}
+    mappings = {"date": 0,"memo": 4, "amount": 5}
     date_format = "%d.%m.%Y"
 
     def split_records(self):
@@ -32,7 +32,7 @@ class FlatexPlugin(Plugin):
     name = "flatex"
     def get_parser(self, fin):
         f = open(fin, "r",encoding='iso-8859-1')
-        parser=BosDeCsvStatementParser(f)
+        parser=FlatexCsvStatementParser(f)
         parser.statement.account_id = self.settings['account']
         parser.statement.currency = None
         parser.statement.bank_id = self.settings.get('bank', 'Flatex Girokonto') 

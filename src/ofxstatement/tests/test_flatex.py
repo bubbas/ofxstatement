@@ -31,7 +31,6 @@ def doctest_FlatexCsvStatementParser():
         >>> l.amount
         0.0
         >>> l.payee 
-        ''
         >>> l.memo
         'Zinsabschluss 01.01.2012,- 31.03.2012,TA-Nr.: 123456789'
         >>> l.date
@@ -51,7 +50,6 @@ def doctest_FlatexCsvStatementParser():
         >>> l.amount
         5000.0
         >>> l.payee
-        '876543210'
         >>> l.memo
         'PRIVATE ÜBERWEISUNG,TA-Nr.: 554466111'
         >>> l.date
