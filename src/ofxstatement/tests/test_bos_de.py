@@ -50,14 +50,14 @@ def doctest_BosDeCsvStatementParser():
         >>> l.date
         datetime.datetime(2013, 1, 2, 0, 0)
 
-    Check one more line with slashes in memo:
+    Check one more line:
         >>> l=statement.lines[4]
         >>> l.amount
         -11.07
         >>> l.memo
         'Solidaritätszuschlag'
 
-    Check one more line with amazon points but without amount:
+    Check last line:
         >>> l=statement.lines[9]
         >>> l.amount
         -1000.0

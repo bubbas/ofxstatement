@@ -53,8 +53,6 @@ class BosDePlugin(Plugin):
     def get_parser(self, fin):
         f = open(fin, "r",encoding='iso-8859-1')
         parser=BosDeCsvStatementParser(f)
-        parser.statement.account_id = self.settings['account']
-        parser.statement.currency = self.settings['currency']
         parser.statement.bank_id = self.settings.get('bank', 'Bank of Scotland') 
         return parser
 
